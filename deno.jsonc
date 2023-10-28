@@ -1,0 +1,9 @@
+{
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "lint": {
+    "include": ["./src/**/*"]
+  }
+}
