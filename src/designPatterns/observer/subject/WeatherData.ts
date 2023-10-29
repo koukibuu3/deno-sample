@@ -22,7 +22,7 @@ export class WeatherData implements SubjectInterface {
 
   notifyObservers(): void {
     this.observers.forEach((observer) => {
-      observer.update(this.temp, this.humidity, this.pressure)
+      observer.update()
     })
   }
 
@@ -35,5 +35,13 @@ export class WeatherData implements SubjectInterface {
     this.humidity = humidity
     this.pressure = pressure
     this.measurementsChanged()
+  }
+
+  getTemp(): number {
+    return this.temp
+  }
+
+  getHumidity(): number {
+    return this.humidity
   }
 }

@@ -13,9 +13,9 @@ export class CurrentConditionDisplay
     this.weatherData.registerObserver(this)
   }
 
-  update(temp: number, humidity: number, _pressure: number): void {
-    this.temp = temp
-    this.humidity = humidity
+  update(): void {
+    this.temp = this.weatherData.getTemp()
+    this.humidity = this.weatherData.getHumidity()
     this.display()
   }
 
